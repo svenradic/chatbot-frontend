@@ -1,0 +1,5 @@
+[[headers]]
+  # Allow requests from localhost during development
+  for = "/*"
+    [headers.values]
+      Access-Control-Allow-Origin = "*"
