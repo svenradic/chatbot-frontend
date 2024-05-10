@@ -51,7 +51,7 @@ function App() {
   return {
     role: 'user',
     content: inputText,
-    userId: user.Id
+  
   }
  }
   function handleSendMessage(){
@@ -92,7 +92,7 @@ async function processMessagesToChatGPT(newMessages){
     const extractedMessages = data.map(message => ({
       role: message.Role,
       content: message.Content,
-      userId: message.UserId
+     
     }));
     setChatMessages(extractedMessages);
   
