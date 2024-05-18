@@ -109,50 +109,6 @@ async function processMessagesToChatGPT(newMessages){
 }
 }
 
-/*
-  async function processMessagesToChatGPT(newMessages){
-    const apiMesssages = newMessages.map(message => {
-      return message.isUser ?
-      {
-        role: 'user',
-        content: message.text
-      }:
-      {
-        role: 'assistant',
-        content: message.text
-      };
-    });
-
-    const systemMessage = {
-      role: 'system',
-      content: 'Speak like a cool 20 year old student'
-    };
-
-    const apiRequestBody = {
-      "model": "gpt-3.5-turbo",
-      "messages": [
-        systemMessage,
-        ...apiMesssages
-      ]
-    };
-    await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Authorization": `Bearer ${API_KEY}`,
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(apiRequestBody)
-    }).then(data => {return data.json()})
-      .then(data => {
-        setChatMessages([...newMessages, {
-          isUser: false,
-          text: data.choices[0].message.content
-        }]);
-      })
-
-  }
-  */
-
   return (
     <main >
       <button onClick={toggleChat} className='toggle-button'>{isOpen ? 'Close chat': 'Open chat'}</button>
