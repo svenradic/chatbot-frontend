@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const shadowRoot = root.attachShadow({ mode: 'open' });
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = '../css/App.css';
+  // link.href = '../css/App.css';
+  link.href = 'https://sven-chatbot.netlify.app/css/app.css'
  
   shadowRoot.appendChild(link);
   const reactApp = document.createElement('div');
@@ -26,5 +27,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-/* https://sven-chatbot.netlify.app/assets/appcss-dn2izyto.css */
 
