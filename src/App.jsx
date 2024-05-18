@@ -8,6 +8,8 @@ function App() {
   const [chatMessages, setChatMessages] = React.useState([{role: 'assistant', content:'Welcome to the chatbot!'}]);
   const [inputText, setInputText] = React.useState('');
 
+  console.log(user)
+  
   React.useEffect(() => {
     const fetchUserData = async () => { // Define async function
       try {
@@ -19,6 +21,10 @@ function App() {
           throw new Error('Failed to fetch user data');
         }
         const data = await response.json();
+        if(data){
+          setUser(data);
+          setChatMessages(data.messages)
+        }
         console.log(data);
       } catch (error) {
         console.error('Error fetching user data:', error);
@@ -27,7 +33,7 @@ function App() {
   
     fetchUserData();
     
-  }, [isOpen])
+  }, [])
    
   function toggleChat(){
     setIsOpen(oldIsOpen => !oldIsOpen);
@@ -39,6 +45,7 @@ function App() {
         key={index}
         content={message.content}
         role={message.role}
+        user={user}
       />)
     });
   }
@@ -51,7 +58,7 @@ function App() {
   return {
     role: 'user',
     content: inputText,
-  
+    userId: user? user.id: null
   }
  }
   function handleSendMessage(){

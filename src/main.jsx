@@ -1,4 +1,4 @@
-  import React from 'react';
+  import React, { version } from 'react';
   import ReactDOM from 'react-dom/client';
   import App from './App.jsx';
 
@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const shadowRoot = root.attachShadow({ mode: 'open' });
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'https://sven-chatbot.netlify.app/assets/appcss-dn2izyto.css';
+  link.href = '/css/App.css';
+ 
   shadowRoot.appendChild(link);
   const reactApp = document.createElement('div');
   reactApp.id = 'react-app';

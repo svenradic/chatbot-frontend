@@ -69,8 +69,15 @@
 .message-text{
   max-width: 80%;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
-.message span{
+.span-chatbot{
+  color: white;
+  font-weight: 600;
+}
+.span-user{
+  align-self: flex-end;
   color: white;
   font-weight: 600;
 }
