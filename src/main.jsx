@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const shadowRoot = root.attachShadow({ mode: 'open' });
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = '/css/App.css';
+  link.href = '../css/App.css';
  
   shadowRoot.appendChild(link);
   const reactApp = document.createElement('div');
