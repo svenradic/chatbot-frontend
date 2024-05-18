@@ -21,7 +21,7 @@ export default defineConfig({
     rollupOptions:{
       input:{
         main: './src/main.jsx',
-        AppCSS: '/css/App.css',
+        AppCSS: './css/App.css',
         app: './src/App.jsx'
       }
     }
