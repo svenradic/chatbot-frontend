@@ -9,6 +9,6 @@ export default function Message(props) {
         <p>{props.content}</p>
       </div>
         
-      </div>
+    </div>
   )
 }

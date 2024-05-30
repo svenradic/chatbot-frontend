@@ -1,18 +1,19 @@
   import React, { version } from 'react';
   import ReactDOM from 'react-dom/client';
   import App from './App.jsx';
+  import 'bootstrap-icons/font/bootstrap-icons.css';
 
   const root = document.createElement('div');
   root.id = 'root';
   document.body.append(root);
   
-document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('DOMContentLoaded', () => {
  
   const shadowRoot = root.attachShadow({ mode: 'open' });
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  // link.href = '../css/App.css';
-  link.href = 'https://sven-chatbot.netlify.app/css/app.css'
+  link.href = '../../css/App.css';
+
  
   shadowRoot.appendChild(link);
   const reactApp = document.createElement('div');
@@ -28,3 +29,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// link.href = 'https://sven-chatbot.netlify.app/css/app.css'
