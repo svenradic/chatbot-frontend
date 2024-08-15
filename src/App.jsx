@@ -130,7 +130,6 @@ function App() {
     
     const data = await response.json();
     // Handle the response data as needed
-    console.log(data);
     setCurrentThread(data);
     fetchUserData();
 
@@ -152,8 +151,6 @@ async function processMessagesToChatGPT(newMessages){
     }
     
     const data = await response.json();
-    console.log(data)
-    // Handle the response data as needed
   
     const extractedMessages = data.map(message => ({
       role: message.role,
@@ -162,7 +159,6 @@ async function processMessagesToChatGPT(newMessages){
      
     }));
     setChatMessages(extractedMessages);
-  
 
 } catch (error) {
     console.error('Error processing messages:', error.message);

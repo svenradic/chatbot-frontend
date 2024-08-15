@@ -12,7 +12,7 @@
   const shadowRoot = root.attachShadow({ mode: 'open' });
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = '../../css/App.css';
+  link.href = '../public/css/App.css';
 
  
   shadowRoot.appendChild(link);
