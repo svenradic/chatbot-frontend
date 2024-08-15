@@ -28,7 +28,7 @@ function App() {
           createThread();
         }
         else{
-          setCurrentThread(data.threads[data.threads.length - 1]);
+          setCurrentThread(data.threads[0]);
         }
         
       }
@@ -75,9 +75,12 @@ function App() {
   }
 
   function displayMessages(){
-    if(chatMessages.length == 2 && currentThread.name == "New chat"){
+    if(currentThread){
+      if(chatMessages.length == 2 && currentThread.name == "New chat"){
       fetchUserData();
     } 
+    }
+    
     return chatMessages.map((message, index) => {
       return (<Message
         key={index}
